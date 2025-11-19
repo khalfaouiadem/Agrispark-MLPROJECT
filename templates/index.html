@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prédiction Potabilité Eau</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #a8edea, #fed6e3); /* bleu ciel et rose doux */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container du formulaire */
+        .form-container {
+            background-color: #ffffffdd;
+            padding: 35px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 380px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2a7f62; /* vert nature */
+            margin-bottom: 25px;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Style des labels et inputs */
+        label {
+            display: block;
+            margin: 12px 0 6px;
+            font-weight: bold;
+            color: #2a7f62;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #a8edea;
+            border-radius: 12px;
+            box-sizing: border-box;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2a7f62;
+            box-shadow: 0 0 8px #2a7f62aa;
+            outline: none;
+        }
+
+        /* Style du bouton */
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #2a7f62;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1f5e48;
+            transform: scale(1.03);
+        }
+
+        /* Affichage du résultat */
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1f5e48;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Prédiction Potabilité Eau</h2>
+        <form method="POST" action="/predict">
+            <label>pH:</label><input type="text" name="ph">
+            <label>Hardness:</label><input type="text" name="Hardness">
+            <label>Solids:</label><input type="text" name="Solids">
+            <label>Chloramines:</label><input type="text" name="Chloramines">
+            <label>Sulfate:</label><input type="text" name="Sulfate">
+            <label>Conductivity:</label><input type="text" name="Conductivity">
+            <label>Organic Carbon:</label><input type="text" name="Organic_carbon">
+            <label>Trihalomethanes:</label><input type="text" name="Trihalomethanes">
+            <label>Turbidity:</label><input type="text" name="Turbidity">
+            <input type="submit" value="Prédire">
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
