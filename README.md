@@ -1,5 +1,5 @@
 
-# 🌱 AgriSmart API - Plateforme d'Intelligence Agricole
+# 🌱 AgriSparck - Plateforme d'Intelligence Agricole
 
 **API intelligente pour l'optimisation agricole** - Prédictions, recommandations et diagnostics pour une agriculture moderne et durable.
 
