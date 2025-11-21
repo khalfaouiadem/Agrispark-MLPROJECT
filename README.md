@@ -1,6 +1,4 @@
-Voici un README professionnel pour votre projet FastAPI :
 
-```markdown
 # 🌱 AgriSmart API - Plateforme d'Intelligence Agricole
 
 **API intelligente pour l'optimisation agricole** - Prédictions, recommandations et diagnostics pour une agriculture moderne et durable.
@@ -128,6 +126,5 @@ Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
 ## 📞 Support
 
 Pour toute question ou problème, veuillez ouvrir une issue sur GitHub ou contacter l'équipe de développement.
-```
 
-Ce README est professionnel, bien structuré et contient toutes les informations essentielles pour comprendre et utiliser votre API FastAPI. Vous pouvez le personnaliser davantage avec vos informations spécifiques de dépôt GitHub.
+
